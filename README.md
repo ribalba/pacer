@@ -79,7 +79,7 @@ mounts the repository at `/tmp/repo` and the scenario uses those paths.
   --name "Pacing energy sweep - machine 7" \
   --repo-url "https://github.com/ribalba/pacer" \
   --branch main --filename usage_scenario.yml \
-  --machine-id 7 --schedule-mode variance --email didi@green-coding.io
+  --machine-id 7 --schedule-mode variance --email pacer@ribalba.de
 ```
 
 Then:

@@ -107,5 +107,11 @@ def main():
         threading.Thread(target=handle, args=(conn, peer), daemon=True).start()
 
 
+def check():
+    # Health check entry point. GMT joins a CMD healthcheck list with spaces and
+    # runs it through sh, so the check must not need any shell quoting.
+    socket.create_connection(('127.0.0.1', PORT), 2).close()
+
+
 if __name__ == '__main__':
-    main()
+    check() if sys.argv[1:] == ['--check'] else main()
